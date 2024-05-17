@@ -1,1 +1,1 @@
-To acquire the ability to receive and understand Morse code transmissions of numbers.
+To acquire and display the signal strength of the RST.

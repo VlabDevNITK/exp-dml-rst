@@ -86,55 +86,199 @@ span.frac > span {display: none;}
 	top: 580px;
 	font-size:12px
 }
-select{
-	width:150px;
-	/* font-weight: bold; */
-	position:absolute;
-	left:310px;
-	top: 96px;
-	scroll-padding-left: 2%;
-	/* padding-bottom: 2%; */
-	scroll-padding-top: 2%;
-	font-weight: 600;
-	font-size: 15px;
-	cursor: pointer;
-	padding: 5px;
-	padding-top: 7px;
-	padding-bottom: 7px;
-}
-.button{
-	
+#human{
 	position: absolute;
-	left:245px;
-	top: 190px;
-	border: #000 1px solid;
-	cursor: pointer;
-}
-.button:disabled{
-	color: inherit;
-	opacity: 1;
-	border: #000 1px solid;
+	left:25%;
 
 }
-label{
+.readable{
 	position: absolute;
-	left:170px;
-	top: 103px;
-	font-size:15px
+	left: 8rem;
+	top: 10rem;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	height: 40px;
+	font-weight: 600;
+	width: 150px;
+    border: #000 solid 1px;
 }
-.plybtn{
+.signalStrength{
 	position: absolute;
-	left:300px;
-	top: 150px;
-	width:70px;
-	height:65px;
+	left: 19rem;
+	top: 10rem;
+	border: #000 solid  1px;
+	font-weight: 600;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	height: 40px;
+	width: 150px;
+}
+.tone{
+	position: absolute;
+	left: 30rem;
+	top: 10rem;
+	border: #000 solid  1px;
+	font-weight: 600;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	
+	height: 40px;
+	width: 90px;
+	
+}
+.submit1{
+	position: absolute;
+	left: 20.5rem;
+	top: 22rem;
+	height: 2rem;
+background: #e5dede;
+border-radius: 10%;
+text-decoration: #fff;
+cursor: pointer;
+}
+
+.rst{
+	position: absolute;
+	left: 100px;
+	top: 9rem;
+	border:2px solid black ;
+	height: 8%;
+	width: 10%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 600;
+	font-family: Arial;
+	font-size: 125%;
+}
+.pd{
+	position: absolute;
+	left: 220px;
+	top: 255px;
+	text-align: justify;
+}
+.pd2{
+	position: absolute;
+	
+	top: 255px;
+	text-align: justify
+}
+.pd3
+{
+	position: absolute;
+	left: 450px;
+	top: 255px;
+	text-align: justify;
+	height: 100px;
+	width: 200px;
+	size: 10rem;
+}
+.read{
+	position: absolute;
+	left: 260px;
+	top:16rem;
+	font-style: bold;
+	font-weight: 600;
+}
+#signalS1{
+	position: absolute;
+	left: 260px;
+	top: 19rem;
+	font-style: bold;
+	font-weight: 600;
+}
+
+.rd1{
+	position: absolute;
+	left: 247px;
+	top: 16rem;
+	font-weight: 600;
+}
+.sg1{
+	position: absolute;
+	left: 247px;
+	top: 19rem;
+	font-weight: 600;
+}
+#toneT1{
+	position: absolute;
+	left: 260px;
+
+	top: 22rem;
+	font-style: bold;
+	font-weight: 600;
+}
+.tn1{
+	position: absolute;
+	left: 247px;
+	top: 22rem;
+	font-weight: 600;
+}
+.toner{
+	position: absolute;
+	left: 100px;
+	top: 22rem;
+}
+#error{
+	position: absolute;
+	left:14rem;
+	top: 250px;
+font-size: 100%;
+color: red;
+font-weight: 600;
+}
+.signalC{
+	position: absolute;
+	left: 100px;
+	top: 19rem;
+	font-weight: 600;
+}
+.readC{
+	position: absolute;
+    left: 100px;
+	top: 16rem;
+	font-weight: 600;
+}
+table {
+	border-collapse: collapse;
+	width: 100%;
+	height: 50%;
+  }
+
+  th, td {
+	border: 1px solid black;
+	padding: 8px;
+	text-align: center;
+  }
+  #repeat{
+	position: absolute;
+	left:290px;
+	top: 27rem;
+	width:60px;
+	height:55px;
+	font-weight: 600;
+	border: #000 2px solid;
+	border-radius: 100%;
+	background: #ede8e8;
+
+   text-decoration: #fff;
+    cursor: pointer;
+  }
+  #repeat:hover{
+	background: #f2ecec;
+  }
+  .plybtn{
+	position: absolute;
+	left:290px;
+	top: 10rem;
+	width:60px;
+	height:55px;
 	border-radius:100%;
 	border-color: #000;
 	color: #000;
 	padding-top:30px;
-	background-color: rgb(219, 221, 221);
+	background-color:#ede8e8;
 	cursor: pointer;
-	font-weight: 600;
 
 }
 .plybtn::before{
@@ -151,148 +295,17 @@ label{
 }
 .plybtn:disabled{
 	position: absolute;
-	left:300px;
-	top: 150px;
-	width:70px;
-	height:65px;
+	left:290px;
+	top: 10rem;
+	width:60px;
+	height:55px;
 	border-radius:100%;
 	border-color: #000;
 	color: #000;
 	padding-top:30px;
-	font-weight: 600;
 }
-p.ad{
+.speaker{
 	position: absolute;
-	left:275px;
-	top: 230px;
-	font-size: 14px;
-}
-p.morse{
-	position: absolute;
-	left:388px;
-	top: 69px;
-	/* font-weight: 600; */
-	/* font-size: 20px; */
-	padding: 3px;
-	padding-left: 7px;
-	padding-right: 7px;
-	
-	
-	
-}
-p.selectmorse{
-	position: absolute;
-	left:243px;
-	top: 70px;
-}
-p.dm{
-	position: absolute;
-	left: 100px;
-	top: 135px;
-    width: 60px;
-	height:40px;
-	border-style: solid;
-	border-width: medium;
-	border-radius: 10px;
-	text-align: center;
-    text-decoration: solid;
-	font-style: bold;
-	border: 2px solid black;
-	font-size: larger;
-	padding-top: 2%;
-	padding-bottom: -2%;
-	padding-left: -2%;
-   padding-right: -2%;
-   
-   font-weight: 600;
-	font-size: 20px;
-
-}
-
-
-.morsedisplay1{
-	position: absolute;
-	left: 490px;
-	top: 135px;
-   
-	font-weight: 700;
-	font-size: 58px;
-	font-family: monospace;
-}
-.button{
-	display: block; 
-	margin-left: 55px;
-	margin-top: 170px;
-}
-.repeat1{
-	position: absolute;
-	top:410px;
-	left:300px;
-	width: 60px;
-	height: 60px;
-	border-radius: 50%;
-	background-color:rgb(224, 223, 223);
-	color:rgb(32, 32, 32);
-	margin-left: -5px;
-	padding: 8px 8px;
-	font-size:10px;
-	
-	
-}
-.warning{
-	position: absolute;
-	left:150px;
-	top: 280px;
-	font-size:14px
-}
-.pd{
-	/* margin: 40px; */
-	padding-right: 35px;
-}
-.pd1{
-	/* margin: 40px; */
-	padding-right: 35px;
-}
-
-.opDoubledash{
-	font-weight: 600;
-	font-size: 15px;
-	padding-top: 5px;
-	padding-bottom: 5px;
-}
-
-.repeatname{
-	font-family:Georgia, 'Times New Roman', Times, serif;
-	font-size: small;
-}
-#numberInput{
-	position: absolute;
-	left: 24rem;
-	top: 11.25em;
-}
-#slider{
-	width: 39%;
-	position: absolute;
-	left: 185px;
-	top:15rem
-}
-.selectNumber{
-	position: absolute;
-	top: 150px;
-	left: 235px;
-}
-#morseImage{
-	position: absolute;
-	top: 255px;
-	height: 150px;
-	left: 490px;
-}
-#hintButton{
-	position: absolute;
-	padding: 10px 10px;
-	top: 320px;
-	left: 257px;
-	border-radius: 8px;
-	font-weight: 600;
-	font-family:  sans-serif;
+	left: 460px;
+	top: 9.5rem;
 }

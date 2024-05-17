@@ -54,249 +54,235 @@ function magic()
 	
 	
 }
-document.addEventListener("DOMContentLoaded", function() {
+function message(){
 
-  var numericInput = document.getElementById("numberInput");
-  var rangeInput = document.getElementById("slider");
-  var errorDisplay = document.getElementById("warningMessage");
-  errorDisplay.style.display = "none";
-
-
-  numericInput.value = 0;
-  rangeInput.value = 0;
-
-  
-  numericInput.addEventListener("input", function() {
-    
-    rangeInput.value = numericInput.value;
-
-   
-    numberMorse();
-    const inputValue1 = numericInput.value;
-
-  // Check if the input value contains multiple zeros
-  if (inputValue1.includes("00")) {
-    // Remove the extra zeros
-    numericInput.value = inputValue1.replace(/00/g, "0");
-  }
-
-    var inputValue = parseInt(numericInput.value, 10);
-    if (isNaN(inputValue) || inputValue < 0 || inputValue > 9 || !Number.isInteger(inputValue)|| numericInput.value.includes(".")) {
-      errorDisplay.style.display = "block";
-      document.getElementById('submit').disabled = true;
-      numericInput.value = "";
-       inputValue = 0;
-    } else {
-      errorDisplay.style.display = "none";
-      document.getElementById('submit').disabled = false;
-      numberMorse();
-    }
-  });
-
-  rangeInput.addEventListener("input", function() {
-
-    numericInput.value = rangeInput.value;
-
-  
-    numberMorse();
-
-    var inputValue = parseInt(numericInput.value, 10);
-    if (isNaN(inputValue) || inputValue < 0 || inputValue > 9 || !Number.isInteger(inputValue)|| numericInput.value.includes(".")) {
-      errorDisplay.style.display = "block";
-      document.getElementById('submit').disabled = true;
-      numericInput.value = "";
-       inputValue = 0;
-    } else {
-      errorDisplay.style.display = "none";
-      document.getElementById('submit').disabled = false;
-      numberMorse();
-    }
-  });
-
-  
-  numberMorse();
-});
-
-  
-  function numberMorse(){
-    var numericInput = document.getElementById("numberInput");
-    var rangeInput = document.getElementById("slider");
-    
-
-
-    // var inputValue = parseInt(numericInput.value, 10);
-    // if (isNaN(inputValue) || inputValue < 0 || inputValue > 9) {
-       
-        
-    // }
-
-    const numToMorse = {
-        "1": ".----",
-        "2": "..---",
-        "3": "...--",
-        "4": "....-",
-        "5": ".....",
-        "6": "-....",
-        "7": "--...",
-        "8": "---..",
-        "9": "----.",
-        "0": "-----"
-      };
-
-    const selectedOption = rangeInput.value;
-    const selectedNumber = numToMorse[selectedOption];
-
-    console.log(selectedOption);
-    console.log(selectedNumber);
-
-    document.getElementById('numberMorse').innerHTML = selectedOption;
-    document.getElementById('dm1').innerHTML = selectedOption;
-
-  }
-  function play(){
-    console.log("play button clicked")
-    document.getElementById("repeat").style.visibility="hidden";
-
-    const numToMorse = {
-        "1": ".----",
-        "2": "..---",
-        "3": "...--",
-        "4": "....-",
-        "5": ".....",
-        "6": "-....",
-        "7": "--...",
-        "8": "---..",
-        "9": "----.",
-        "0": "-----"
-      };
-
-    var numericInput = document.getElementById("slider");
-	const morsedisplay= document.getElementById("morsedisplay");
-    const playbutton = document.getElementById("ply");
-    const intervalDuration = 800;
-
-   morsedisplay.innerHTML  = ''; 
-
-   let currentIndex = 0;
-   let selectedOption = numericInput.value;
-   let selectedNumber = numToMorse[selectedOption];
-
-   let interval; 
-
-    function seqMorse(){
-		
-		
-	if (currentIndex < selectedNumber.length) {
-        playbutton.disabled = true;
-
-
-		
-		const currentChar = selectedNumber[currentIndex];
-		const Context = new AudioContext(); 
-
-
-		var oscillator = Context.createOscillator();
-		oscillator.frequency.value=600;
-		oscillator.connect(Context.destination);
-		oscillator.start();
-		// Play audio for dots and dashes
-		if (currentChar === '.') {
-			setTimeout(function() { oscillator.stop();},100);
-		//   dotAudio.play();
-		} else if (currentChar === '-') {
-			setTimeout(function() { oscillator.stop();},300);
-
-		//   dashAudio.play();
-		}
-		
-    // Update the Morse code being displayed
-    morsedisplay.innerHTML += currentChar;
-    
-    // Move to the next character
 	
-    currentIndex++;
-	console.log(currentIndex)
+		// Retrieve the values of the select tags
+		var select1Value = document.getElementById("readable1");
+		var select2Value = document.getElementById("signalStrength1");
+		var select3Value = document.getElementById("tone1");
+  
+		// Create a paragraph element to display the values
+		var resultParagraph = document.getElementById("RST");
+		resultParagraph.innerHTML = + select1Value.options[select1Value.selectedIndex].text + " " + select2Value.options[select2Value.selectedIndex].text
+		 + " " + select3Value.options[select3Value.selectedIndex].text;
+
+		 const RST={
+			"r":"",
+			"R1":{text:"Unreadable",rate:2},
+			"R2":{text:"Barely readable,occasional words distinguishable",rate:1.8},
+			"R3":{text:"Readable with pratically no difficulty", rate:1.6},
+			"R4":{text:"Readable with practically no difficulty", rate:1.3},
+			"R5":{text:"Perfectly readable", rate:1},
+			"s":"",
+			"S1":{text:"Faint signals barely perceptible",strength:0.2},
+			"S2":{text:"Very weak signals",strength:0.3},
+			"S3":{text:"Weak signals",strength:0.4},
+			"S4":{text:"Fair signals",strength:0.5},
+			"S5":{text:"Fairly good signals",strength:0.6},
+			"S6":{text:"Good signals",strength:0.7},
+			"S7":{text:"Moderately good signals",strength:0.8},
+			"S8":{text:"Strong signals",strength:0.9},
+			"S9":{text:"Extremely strong signals",strength:1.0},
+			"t":"",
+			"T1":{text:"Sixty-cycle ac or less, very rough and broad",pitch:0.2},
+			"T2":{text:"Very rough ac, vry harsh and broad",pitch:0.3},
+			"T3":{text:"Rough ac tone, rectified but not filtered",pitch:0.4},
+			"T4":{text:"Rough note,some trace of filtering",pitch:0.5},
+			"T5":{text:"Filtered rectified ac but strongly ripple-modulated",pitch:0.6},
+			"T6":{text:"Filtered tone,definite trace of ripple modulation",pitch:0.7},
+			"T7":{text:"Near pure tone,trace of ripple modulation",pitch:0.8},
+			"T8":{text:"Near perfect tone,slight trace of modulation",pitch:0.9},
+			"T9":{text:"Perfect tone, no trace of ripple or modulation of any ripple",pitch:1.0}
 	
-  } 
-      
-    else {
-   
-   
-       console.log("hello")
-       playbutton.disabled = false;
-       document.getElementById("repeat").style.visibility="visible";
+		   }
+  //readablity
+  var selectedOption=select1Value.value;
+  let selectedR1 = RST[selectedOption].text;
+  console.log(selectedR1)
+  
 
-	document.getElementById("ply").addEventListener('click',function (){
+  document.getElementById("readR1").innerHTML=selectedR1;
+//signal astrength
+  var selectedOption=select2Value.value;
+  let selectedS1=RST[selectedOption].text;
+  console.log(selectedS1);
+
+  document.getElementById("signalS1").innerHTML=selectedS1;
+
+  //tone
+  var selectedOption=select3Value.value;
+  let selectedT1=RST[selectedOption].text;
+  console.log(selectedT1);
+
+
+
+  document.getElementById("toneT1").innerHTML=selectedT1;
+
+	   if(select1Value.value === "r" || select2Value.value === "s" || select3Value.value === "t"){
+		document.getElementById("error").innerHTML="Please select the appropriate values";
+		// document.getElementById("repeat").style.visibility="hidden";
+	   }
+	   else{
+		document.getElementById("subMit").addEventListener('click',function navNext() {
+			// document.getElementById("repeat").style.visibility="visible";
 		
-
+	 
 	});
-    clearInterval(interval);
+	navNext();
+	  }
+	}
+	function repeat(){
 
-	
 
-	
-	
-  }
-}
-    seqMorse();
-    interval = setInterval(seqMorse, intervalDuration);
-  }
-  function repeat(){
-	
-	console.log("clickedrepeat");
-   
-simsubscreennum = 1;
-   
-	document.getElementById("canvas2").style.visibility="hidden";
-  
+		simsubscreennum = 1;
+		document.getElementById("canvas2").style.visibility="hidden";
+        document.getElementById("canvas1").style.visibility="visible";
+        document.getElementById("repeat").style.visibility="hidden";
+	    var selectclear=document.getElementById('readable1');
+        selectclear.selectedIndex=0;
+
+	    var selectclear=document.getElementById('signalStrength1');
+        selectclear.selectedIndex=0;
+
+        var selectclear=document.getElementById('tone1');
+        selectclear.selectedIndex=0;
+	    document.getElementById("error").innerHTML="";
+	}
  
-document.getElementById("canvas1").style.visibility="visible";
-document.getElementById("repeat").style.visibility="hidden";
-
-const selectclear=document.getElementById('myselect');
-selectclear.selectedIndex=0;
-}
-function repeat(){
-	
-	console.log("clickedrepeat");
-   
-    simsubscreennum = 1;
-   
-	document.getElementById("canvas2").style.visibility="hidden";
-    document.getElementById("canvas1").style.visibility="visible";
-    document.getElementById("repeat").style.visibility="hidden";
-  
-    document.getElementById('morsedisplay').innerHTML = "";
-
-
-    var morseImage = document.getElementById('morseImage');
-
-   morseImage.style.visibility='hidden';
-
-   var numericInput = document.getElementById("numberInput");
-   var rangeInput = document.getElementById("slider");
-
-   numericInput.value = 0;
-   rangeInput.value = 0;
-   numberMorse();
  
-   
+function speak(){
+	var select1Value = document.getElementById("readable1");
+	var select2Value = document.getElementById("signalStrength1");
+	var select3Value = document.getElementById("tone1");
+	const loadingGif = document.getElementById('speaker-icon');
 
 
+	document.getElementById('repeat').style.visibility='hidden';
+
+	// Create a paragraph element to display the values
+	// var resultParagraph = document.getElementById("RST");
+	// resultParagraph.innerHTML = + select1Value.options[select1Value.selectedIndex].text + " " + select2Value.options[select2Value.selectedIndex].text
+	//  + " " + select3Value.options[select3Value.selectedIndex].text;
+	const RST={
+		"r":"",
+		"R1":{text:"Unreadable",rate:2},
+		"R2":{text:"Barely readable,occasional words distinguishable",rate:1.8},
+		"R3":{text:"Readable with pratically no difficulty", rate:1.6},
+		"R4":{text:"Readable with practically no difficulty", rate:1.3},
+		"R5":{text:"Perfectly readable", rate:1},
+		"s":"",
+		"S1":{text:"Faint signals barely perceptible",strength:0.2},
+		"S2":{text:"Very weak signals",strength:0.3},
+		"S3":{text:"Weak signals",strength:0.4},
+		"S4":{text:"Fair signals",strength:0.5},
+		"S5":{text:"Fairly good signals",strength:0.6},
+		"S6":{text:"Good signals",strength:0.7},
+		"S7":{text:"Moderately good signals",strength:0.8},
+		"S8":{text:"Strong signals",strength:0.9},
+		"S9":{text:"Extremely strong signals",strength:1.0},
+		"t":"",
+		"T1":{text:"Sixty-cycle ac or less, very rough and broad",pitch:0.2},
+		"T2":{text:"Very rough ac, vry harsh and broad",pitch:0.3},
+		"T3":{text:"Rough ac tone, rectified but not filtered",pitch:0.4},
+		"T4":{text:"Rough note,some trace of filtering",pitch:0.5},
+		"T5":{text:"Filtered rectified ac but strongly ripple-modulated",pitch:0.6},
+		"T6":{text:"Filtered tone,definite trace of ripple modulation",pitch:0.7},
+		"T7":{text:"Near pure tone,trace of ripple modulation",pitch:0.8},
+		"T8":{text:"Near perfect tone,slight trace of modulation",pitch:0.9},
+		"T9":{text:"Perfect tone, no trace of ripple or modulation of any ripple",pitch:1.0}
+
+	   }
+//readablity
+var selectedOption=select1Value.value;
+let selectedR1=RST[selectedOption].text;
+let utRate=RST[selectedOption].rate;
+
+console.log(utRate);
+
+console.log(selectedR1);
+
+
+
+document.getElementById("readR1").innerHTML=selectedR1;
+//signal strength
+var selectedOption=select2Value.value;
+let selectedS1=RST[selectedOption].text;
+let stRength =RST[selectedOption].strength;
+console.log(stRength);
+console.log(selectedS1);
+
+document.getElementById("signalS1").innerHTML=selectedS1;
+
+//tone
+var selectedOption=select3Value.value;
+let selectedT1=RST[selectedOption].text;
+let pitchVal=RST[selectedOption].pitch;
+console.log(pitchVal);
+console.log(selectedT1);
+
+ 
+
+// rate value  
+const speakButton = document.getElementById('ply');
+        speakButton.disabled = true; // Disable the button
+	if ('speechSynthesis' in window) {
+		const textElement = document.getElementById('RST');
+		const textToSpeak = textElement ? textElement.textContent : 'Text not found';
+		const utterance = new SpeechSynthesisUtterance(textToSpeak);
+		utterance.lang = 'en-US';
+        utterance.rate=utRate;
+		utterance.volume=stRength;
+        utterance.pitch= pitchVal;
+		const voices = speechSynthesis.getVoices();
+		utterance.voice = voices.find(voice => voice.lang === 'en-US');
+	
+
+		utterance.onstart = () => {
+			console.log('Speech synthesis started');
+			loadingGif.style.visibility = 'visible'; 
+		}
+		utterance.onend = () => {
+			console.log('Speech synthesis ended');
+			speakButton.disabled = false; // Enable the button when speech ends
+			document.getElementById('repeat').style.visibility='visible';
+			loadingGif.style.visibility = 'hidden';
+
+		};
+		utterance.onerror = (event) => {
+			console.error('Speech synthesis error', event.error);
+			speakButton.disabled = false; // Enable the button in case of an error
+			document.getElementById('repeat').style.visibility='visible';
+			loadingGif.style.visibility = 'hidden';
+		};
+
+		speechSynthesis.speak(utterance);
+	} else {
+		console.error('Speech synthesis is not supported in this browser.');
+		speakButton.disabled = false; // Enable the button if speech synthesis is not supported
+		document.getElementById('repeat').style.visibility='visible';
+		loadingGif.style.visibility = 'hidden';
+	}
+
+
+	
 }
-function hint(){
-  var morseImage = document.getElementById('morseImage');
 
-  if(morseImage.style.visibility === 'hidden'){
-   morseImage.style.visibility='visible';
-  }
-  else{
-   morseImage.style.visibility='hidden';
-  }
-}
 
-  
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
 
 
 

@@ -1,24 +1,25 @@
-### Introduction:
+### Intorduction
+<p style="text-align: justify;">The **R-S-T system** is used by amateur radio operators, shortwave listeners, and other radio hobbyists to exchange information about the quality of a radio signal being received. The code is a three digit number, with one digit each for conveying an assessment of the signal's readability, strength, and tone.</p>
 
-<p style="text-align: justify;">Morse code numbers are a systematic and efficient way to represent numerical digits using combinations of dots and dashes. They played a pivotal role in the history of telecommunications and continue to be relevant in certain specialized communication fields today. Understanding Morse code numbers provides insights into the development and practical applications of this iconic communication system.</p>
-<p style="text-align: justify;">In Morse code, numbers are represented using a series of dots (.) and dashes (-), just like letters and other characters. Each number from 0 to 9 has a unique Morse code representation. </p>
 
-<p>Here are the Morse code representations for the numbers:</p>
+**Readability:**
+<p style="text-align: justify;">The "R" in the R-S-T system denotes "Readability," which is a qualitative evaluation of the ease or difficulty in accurately interpreting transmitted information. In Morse code telegraphy transmissions, readability assesses the distinguishability of each character in the message text. In voice transmissions, it gauges the ease or difficulty in correctly understanding each spoken word. Readability is gauged on a scale ranging from 1 to 5.</p>
 
-<p style="text-align: justify;">
-0  -----
-<br>1  .----
-<br>2  ..---
-<br>3  ...--
-<br>4  ....-
-<br>5  .....
-<br>6  -....
-<br>7  --...
-<br>8  ---..
-<br>9  ----.
-</p>
+**Strength:**
+<p style="text-align: justify;">The "S" in the R-S-T system represents "Strength," which evaluates the power of the received signal at the receiving location. While a precise signal strength meter can provide a quantitative measure, the Strength component in the RST code is typically a qualitative assessment. This assessment is often determined based on the S meter of the radio receiver at the signal reception location. The "Strength" is measured on a scale ranging from 1 to 9.</p>
 
-<p style="text-align: justify;">In Morse code, numbers are often used in various applications, including sending numerical values in telegraphy or radio communication. These representations allow for the transmission of numbers in Morse code, adding versatility to the communication system.
-Morse code numbers can be related to binary numbers, where dots and dashes are analogous to binary digits (bits). This binary representation conceptually connects Morse code to digital data encoding and transmission.</p>
-<p style="text-align: justify;">The simplicity and universality of Morse code made it a valuable tool for communication, especially in situations where speech or written language might be impractical. Additionally, Morse code numbers found applications in maritime communication, aviation, and military operations.</p>
-<p style="text-align: justify;">In modern contexts, the principles of Morse code, including its numerical representation, are applied in digital signal processing. Morse code algorithms can be implemented in computer programs for encoding and decoding purposes, demonstrating the adaptability of this historical communication system in contemporary technologies.</p>
+**Tone:**
+<p style="text-align: justify;">The "T" in the R-S-T system stands for "Tone" and is evaluated on a scale from 1 to 9. Tone considerations are applicable exclusively to Morse code and other digital transmission modes, making them irrelevant during voice operations. Advances in modern technology have significantly reduced imperfections in digital modulation by transmitters to the extent that they are rarely detectable by human ears.</p>
+
+|  READABILITY                                       |  SIGNAL STRENGTH                   |  TONE  (CW Morse Radiotelegraph only):                       |
+|:---                                                |:---                                |:---                                                          |
+|1. Unreadable                                       |1. Faint signals barely perceptible |1. Sixty-cycle ac or less, very rough and broad               |
+|2. Barely readable, occasional words distinguishable|2. Very weak signals                |2. Very rough ac, very harsh and broad                        |
+|3. Readable with considerable difficulty            |3. Weak signals                     |3. Rough ac tone, rectified but not filtered                  |
+|4. Readable with practically no difficulty          |4. Fair signals                     |4. Rough note, some trace of filtering                        |
+|5. Perfectly readable                               |5. Fairly good signals              |5. Filtered rectified ac but strongly ripple-modulated        |
+|                                                    |6. Good signals                     |6. Filtered tone, definite trace of ripple modulation         |
+|                                                    |7. Moderately strong signals        |7. Near pure tone, trace of ripple modulation                 |
+|                                                    |8. Strong signals                   |8. Near perfect tone, slight trace of modulation              |
+|                                                    |9. Extremely strong signals         |9. Perfect tone, no trace of ripple or modulation of any kind |
+

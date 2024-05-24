@@ -1,1 +1,1 @@
-## Exploring HAM Radio: Readable Signal Strength Tone System
+## Exploring HAM Radio: Readablity-Signal Strength-Tone (R-S-T) System

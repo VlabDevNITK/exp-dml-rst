@@ -1,1 +1,1 @@
-To acquire and display the signal strength of the RST.
+To develop a comprehensive understanding of the readability, strength, and tone (for Morse code) of a received signal.

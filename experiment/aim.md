@@ -1,1 +1,1 @@
-To develop a comprehensive understanding of Readable Signal Strength Tone.
+To develop a comprehensive understanding of the readability, strength, and tone (for Morse code) of a received signal.

@@ -7,11 +7,11 @@
         "a": "Excellent signal strength",
         "b": "Weak signal strength",
         "c": "No signal detected",
-        "d":  "Average signal strengt"
+        "d": "Average signal strength"
       },
       "explanations": {
         "a": "A score of \"2\" in the RST system suggests weak signal strength, not excellent.",
-        "b": "The \"S\" (Signal Strength) scale typically ranges from 1 to 9, with 1 being the weakest signal and 9 being the strongest. Therefore, a signal strength score of \"2\" suggests a weak signal. ",
+        "b": "The \"S\" (Signal Strength) scale typically ranges from 1 to 9, with 1 being the weakest signal and 9 being the strongest. Therefore, a signal strength score of \"2\" suggests a weak signal.",
         "c": "A score of \"2\" implies that there is a signal, but it is weak. It does not suggest no signal detected.",
         "d": "A score of \"2\" suggests below-average or weak signal strength, not an average level."
       },
@@ -28,7 +28,7 @@
       },
       "explanations": {
         "a": "A readability score of \"5\" indicates perfect readability, not slight distortion.",
-        "b": " A score of \"5\" suggests the highest level of readability, not a moderate level.",
+        "b": "A score of \"5\" suggests the highest level of readability, not a moderate level.",
         "c": "In the RST system, the \"R\" (Readability) scale ranges from 1 to 5, with 1 being the most difficult to read and 5 indicating perfect readability.",
         "d": "A score of \"5\" suggests the best readability, not the absence of readability."
       },
@@ -36,16 +36,16 @@
       "difficulty": "Beginner"
     },
     {
-      "question": ".What is the range of values for the \"Ton\" component in the RST system?",
+      "question": "What is the range of values for the \"Tone\" component in the RST system?",
       "answers": {
         "a": "1 to 5",
         "b": "0 to 100",
         "c": "1 to 9",
-        "d":  "0 to 9"
+        "d": "0 to 9"
       },
       "explanations": {
-        "a": " The \"Tone\" component in the RST system ranges from 0 to 9, not 1 to 5.",
-        "b": "The correct range for the \"Tone\" component in the RST system is 0 to 9, not 0 to 100.",
+        "a": "The \"Tone\" component in the RST system ranges from 1 to 9, not 1 to 5.",
+        "b": "The correct range for the \"Tone\" component in the RST system is 1 to 9, not 0 to 100.",
         "c": "In the RST system, the \"T\" (Tone) component represents a numerical score ranging from 1 to 9.",
         "d": "The correct range for the \"Tone\" component in the RST system is 1 to 9, not 0 to 9."
       },
@@ -61,47 +61,47 @@
         "d": "Average signal strength"
       },
       "explanations": {
-        "a": " A signal strength score of \"3\" in the RST system suggests an average signal strength, not excellent.",
+        "a": "A signal strength score of \"3\" in the RST system suggests an average signal strength, not excellent.",
         "b": "The \"S\" (Signal Strength) scale ranges from 1 to 9, with 1 being the weakest and 9 being the strongest signal. A signal strength score of \"3\" indicates an average signal strength.",
-        "c": " A score of \"3\" in the RST system implies the presence of a signal, not the absence.",
-        "d": "A signal strength score of \"3\" in the RST system indicates a weaker signal, not an average one."
+        "c": "A score of \"3\" in the RST system implies the presence of a signal, not the absence.",
+        "d": "A signal strength score of \"3\" in the RST system indicates a weak signal, not an average one."
       },
-      "correctAnswer": "b",
+      "correctAnswer": "d",
       "difficulty": "Beginner"
     },
     {
       "question": "What does the number \"6\" signify in the signal strength component of the RST system?",
       "answers": {
         "a": "Excellent signal strength",
-        "b":  "Weak signal strength",
+        "b": "Weak signal strength",
         "c": "No signal detected",
-        "d":  "Average signal strength"
+        "d": "Average signal strength"
       },
       "explanations": {
         "a": "A signal strength score of \"6\" does not indicate excellence; it signifies average signal strength.",
-        "b": " \"6\" on the RST scale does not suggest weaker signal strength; it points to an average level.",
+        "b": "\"6\" on the RST scale does not suggest weaker signal strength; it points to an average level.",
         "c": "A score of \"6\" implies the presence of a signal, not the absence.",
-        "d": "The \"S\" (Signal Strength) scale ranges from 1 to 9, with 1 being the weakest and 9 being the strongest signal. A signal strength score of \"6\" indicates a weak signal strength."
+        "d": "The \"S\" (Signal Strength) scale ranges from 1 to 9, with 1 being the weakest and 9 being the strongest signal. A signal strength score of \"6\" indicates a fairly good signal strength."
       },
       "correctAnswer": "d",
       "difficulty": "Beginner"
     },
     {
-      "question": "During practical use, why might a tone score of \"7\" be considered favorable in the RST system",
+      "question": "During practical use, why might a tone score of \"7\" be considered favorable in the RST system?",
       "answers": {
         "a": "Clear and pleasant tone",
-        "b":  "No tone detected",
+        "b": "No tone detected",
         "c": "Harsh or distorted tone",
-        "d":  "Slow transmission"
+        "d": "Slow transmission"
       },
       "explanations": {
-        "a": "The \"T\" (Tone) component ranges from 0 to 9, with higher values indicating a clearer and more pleasant tone.",
+        "a": "The \"T\" (Tone) component ranges from 1 to 9, with higher values indicating a clearer and more pleasant tone.",
         "b": "A score of \"7\" suggests a detected tone, not the absence of tone.",
         "c": "A tone score of \"7\" indicates a clear and pleasant tone, not harsh or distorted.",
         "d": "The \"T\" (Tone) component in the RST system does not specifically measure the speed of transmission; it assesses the quality of the tone."
       },
       "correctAnswer": "a",
-      "difficulty": "Intermidiate"
+      "difficulty": "Intermediate"
     },
     {
       "question": "What is the primary purpose of the \"Tone\" component in the RST system for voice communications?",
@@ -118,8 +118,8 @@
         "d": "While the \"T\" (Tone) component considers the quality of the audio signal, it is not specifically focused on rating the sender's vocal tone in terms of emotional expression."
       },
       "correctAnswer": "b",
-      "difficulty": "Intermidiate"
-    },  
+      "difficulty": "Intermediate"
+    },
     {
       "question": "Which of the following RST values would indicate a perfect signal report?",
       "answers": {
@@ -132,10 +132,10 @@
         "a": "\"599\" implies perfect readability (5), extremely strong signal strength (9), and a clear and pleasant tone (9). This signal report is often used to convey that the communication conditions are optimal.",
         "b": "The signal strength component is not at the maximum, so it does not indicate a perfect signal report.",
         "c": "The readability component is not at the maximum, so it does not indicate a perfect signal report.",
-        "d": " While the signal strength is good, the readability component is not at the maximum, so it does not represent a perfect signal report."
+        "d": "While the signal strength is good, the readability component is not at the maximum, so it does not represent a perfect signal report."
       },
       "correctAnswer": "a",
-      "difficulty": "Intermidiate"
+      "difficulty": "Intermediate"
     },
     {
       "question": "If a selection of “579” in RST is made, what does it imply?",
@@ -146,13 +146,13 @@
         "d": "Poor readability, very strong signal, harsh tone"
       },
       "explanations": {
-        "a": "\"579\" suggests that the readability is good, the signal strength is strong, and the tone is normal or pleasant. ",
+        "a": "\"579\" suggests that the readability is good, the signal strength is strong, and the tone is normal or pleasant.",
         "b": "\"579\" does not indicate fair readability, a weak signal, or a distorted tone.",
         "c": "\"579\" does not indicate excellent readability or a moderate signal; it suggests good readability and a strong signal.",
         "d": "\"579\" does not imply poor readability or a very strong signal; it suggests good readability and a strong signal with a normal or pleasant tone."
       },
       "correctAnswer": "a",
-      "difficulty": "Intermidiate"
+      "difficulty": "Intermediate"
     },
     {
       "question": "During a Morse code transmission with an RST score of \"599\" what does the \"9\" in the signal strength component signify?",
@@ -182,8 +182,8 @@
       "explanations": {
         "a": "The repeated \"2\" in the RST score \"222\" suggests consistently weak signal strength, not excellence.",
         "b": "The repeated \"2\" in the RST score \"222\" implies consistently weak signal strength, not a moderate level.",
-        "c": "The repeated \"2\" in the signal strength component suggests a Morse code transmission with a consistently weak signal",
-        "d": " An RST score of \"222\" implies the presence of a signal with consistently weak strength, not the absence of signal."
+        "c": "The repeated \"2\" in the signal strength component suggests a Morse code transmission with a consistently weak signal.",
+        "d": "An RST score of \"222\" implies the presence of a signal with consistently weak strength, not the absence of signal."
       },
       "correctAnswer": "c",
       "difficulty": "Advanced"
@@ -193,36 +193,35 @@
       "answers": {
         "a": "Perfect clarity",
         "b": "Moderately clear",
-        "c": "Difficult to understand",
-        "d": "No readability detected"
+        "c": "Readability is practically nonexistent",
+        "d": "Extremely difficult to read"
       },
       "explanations": {
         "a": "A readability score of \"1\" does not imply perfect clarity; it indicates the lowest level of readability.",
         "b": "A readability score of \"1\" does not suggest moderate clarity; it indicates very poor readability.",
-        "c": "While a score of \"1\" implies difficulty in understanding, the more accurate description is that readability is so poor that it may be practically nonexistent.",
-        "d": "The \"R\" (Readability) scale ranges from 1 to 5, with \"1\" being the lowest score."
+        "c": "A readability score of \"1\" implies that readability is practically nonexistent.",
+        "d": "A readability score of \"1\" indicates extreme difficulty in reading, almost unreadable text."
       },
-      "correctAnswer": "d",
+      "correctAnswer": "c",
       "difficulty": "Advanced"
     },
     {
       "question": "In a Morse code transmission with an RST score of \"555\" what does the repeated \"5\" in the signal strength component suggest?",
       "answers": {
-        "a": "Excellent signal strength",
-        "b":  "Moderate signal strength",
+        "a": "Good signal strength",
+        "b": "Moderate signal strength",
         "c": "Weak signal strength",
-        "d":  "Weak signal strength"
+        "d": "No signal detected"
       },
       "explanations": {
-        "a": "The repeated \"5\" in the RST score \"555\" suggests consistently moderate signal strength, not excellence.",
-        "b": "The repeated \"5\" in the signal strength component suggests a Morse code transmission with a consistently moderate signal",
-        "c": "The repeated \"5\" does not indicate weak signal strength; it signifies a moderate level.",
-        "d": "An RST score of \"555\" implies the presence of a signal with consistently moderate strength, not the absence of signal."
+        "a": "The repeated \"5\" in the RST score \"555\" suggests consistently good signal strength",
+        "b": "The repeated \"5\" in the signal strength component suggests a Morse code transmission with a consistently good signal.",
+        "c": "The repeated \"5\" does not indicate weak signal strength; it signifies a good level.",
+        "d": "An RST score of \"555\" implies the presence of a signal with consistently good strength, not the absence of signal."
       },
-      "correctAnswer": "b",
+      "correctAnswer": "a",
       "difficulty": "Advanced"
     },
-  
     {
       "question": "In a Morse code transmission with an RST score of \"333\", what does the repeated \"3\" in the signal strength component suggest?",
       "answers": {
@@ -235,7 +234,7 @@
         "a": "The repeated \"3\" in the RST score \"333\" suggests consistently weak signal strength, not excellence.",
         "b": "The repeated \"3\" in the signal strength component suggests a Morse code transmission with a consistently weak signal.",
         "c": "Therefore, the repeated \"3\" in the signal strength component suggests a Morse code transmission with a consistently weak signal.",
-        "d": " An RST score of \"333\" implies the presence of a signal with consistently weak strength, not the absence of signal."
+        "d": "An RST score of \"333\" implies the presence of a signal with consistently weak strength, not the absence of signal."
       },
       "correctAnswer": "c",
       "difficulty": "Advanced"

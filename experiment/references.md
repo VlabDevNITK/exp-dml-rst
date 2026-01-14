@@ -20,7 +20,6 @@ Mention about only the important references -->
 Contributors :
 <ul style="list-style-type: none;">
 <li>Varun | NITK</li>
-<li>Anusha B Salian | NITK</li>
 <li>Shradha shetty | NITK</li>
   </ul></td>
 </tr>

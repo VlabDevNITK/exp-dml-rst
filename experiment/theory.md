@@ -1,6 +1,5 @@
-### Intorduction
-<p style="text-align: justify;">The **R-S-T system** is used by amateur radio operators, shortwave listeners, and other radio hobbyists to exchange information about the quality of a radio signal being received. The code is a three digit number, with one digit each for conveying an assessment of the signal's readability, strength, and tone.</p>
-
+### Introduction
+<p style="text-align: justify;">The <strong>R-S-T system</strong> is used by amateur radio operators, shortwave listeners, and other radio hobbyists to exchange information about the quality of a radio signal being received. The code is a three-digit number, with one digit each for conveying an assessment of the signal's readability, strength, and tone.</p>
 
 **Readability:**
 <p style="text-align: justify;">The "R" in the R-S-T system denotes "Readability," which is a qualitative evaluation of the ease or difficulty in accurately interpreting transmitted information. In Morse code telegraphy transmissions, readability assesses the distinguishability of each character in the message text. In voice transmissions, it gauges the ease or difficulty in correctly understanding each spoken word. Readability is gauged on a scale ranging from 1 to 5.</p>
@@ -22,4 +21,3 @@
 |                                                    |7. Moderately strong signals        |7. Near pure tone, trace of ripple modulation                 |
 |                                                    |8. Strong signals                   |8. Near perfect tone, slight trace of modulation              |
 |                                                    |9. Extremely strong signals         |9. Perfect tone, no trace of ripple or modulation of any kind |
-

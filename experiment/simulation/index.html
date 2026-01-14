@@ -1,195 +1,114 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta 	 charset="UTF-8">
-<title>SOLVE</title>
-<link rel="stylesheet" href="css/style.css" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-<script type="text/javascript" src="js/script.js"></script>
-<style>
-.popup
-{
-	border-radius:5px;
-	background-color:black;
-	color:white;
-	padding:5px;
-}
-
-.tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
-}
-
-.tooltip .tooltiptext {
-  left:102px;
-  visibility: hidden;
-  width: 550px;
-  background-color: black;
-  color: #fff;
-  border-radius: 6px;
-  padding: 10px 10px 10px 10px;
-
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 100;
- /*text-align:center; */
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
-
-</style>
-</head>
-
-<body style="margin:0; font-family:verdana;">
-<div id="simscreen">
-<div id="title"><h3>EXPLORING HAM RADIO:RST-SYSTEM
-</h3></div>
-
-<div class="simsubscreen" id="canvas0" >
-	<h4 class="incanvas">Objective:</h4>
-	<p class="incanvas" style="font-size:14px;">To acquire and display the signal strength of the RST. 
-	</p><br/>
-    <h4 class="incanvas">Discription:</h4>
-    <p  class="pd1" style="font-size:14px;margin-left: 5px;margin-right: 40px;text-align: justify;">
-		
-The RST reporting system comprises three distinct numerical components: Readability (R), Strength (S), and Tone (T).
- It is important to note that the Tone value is specifically applicable to Morse code transmissions.</p>
-
-<p style="font-size:14px;margin-left: 5px;margin-right: 40px;text-align: justify;">Amateur radio operators, shortwave enthusiasts, and other radio hobbyists 
-	utilize the R-S-T system to communicate the quality of received radio signals. This system comprises a 
-	three-digit code, with each digit representing an evaluation of the signal's readability, strength, and tone,
-	 respectively. Originating in 1934, the code was devised by Arthur W. Braaten, W2BSR, an amateur radio operator,
-	  and bears resemblance to the codification outlined in the ITU Radio Regulations in Cairo in 1938.
-
-</p>
-<p  style="font-size:14px;margin-left: 5px;margin-right: 40px;text-align: justify;"><b>Readability (R)</b>: This assesses how easily the transmitted information can be understood. It is often graded on a scale from 1 to 5, where 1 is barely readable and 5 is perfectly readable.</p>
-<p  style="font-size:14px;margin-left: 5px;margin-right: 40px;text-align: justify;"><b>Signal Strength (S)</b>: This indicates the strength or power level of the received signal. It is typically graded on a scale from 1 to 9, with 1 being an extremely weak signal and 9 being an extremely strong signal.</p>	
-<p  style="font-size:14px;margin-left: 5px;margin-right: 40px;text-align: justify;"><b>Tone (T)</b>: This
-	 is gauged on a scale ranging from 1 to 9. Tone specifically applies to Morse code and other digital transmission methods, and it is not applicable to voice operations. </p>
-<!--  <ul class="pd2"> -->
-
-
-
-<!-- <img src="images/human.png" id="human"> -->
-</div>
-
-<div id="nav">
-	
-	<img id="nextButton" onclick="navNext()" src="images/Next.png" alt="" /></a>
-
-</div>
-
-<div class="simsubscreen" id="canvas1" style="visibility:hidden;">
-	<strong class="incanvas">STEP</strong>
-	<span class="circlebg">&nbsp;1&nbsp;</span>
-	<p class="steptext">&nbsp;Select RST values from the selection box</p>
-<br>
-	
-	<select id="readable1" class="readable" >
-	  <option value="r">R(Readable)</option>
-	  <option value="R1">1</option>
-	  <option value="R2">2</option>
-	  <option value="R3">3</option>
-	  <option value="R4">4</option>
-	  <option value="R5">5</option>
-  
-  
-	</select>
-
-
-	<select id="signalStrength1" class="signalStrength" aria-placeholder="">
-		<option value="s">S(Signal-Strength)</option>
-		<option value="S1">1</option>
-	  <option value="S2">2</option>
-	  <option value="S3">3</option>
-	  <option value="S4">4</option>
-	  <option value="S5">5</option>
-  	  <option value="S6">6</option>
-	  <option value="S7">7</option>
-	  <option value="S8">8</option>
-	  <option value="S9">9</option>
-  
-	</select>
-
-	<select id="tone1"  class="tone" aria-placeholder="">
-      <option value="t">T(Tone)</option>
-	  <option value="T1">1</option>
-	  <option value="T2">2</option>
-	  <option value="T3">3</option>
-	  <option value="T4">4</option>
-	  <option value="T5">5</option>
-	  <option value="T6">6</option>
-	  <option value="T7">7</option>
-	  <option value="T8">8</option>
-	  <option value="T9">9</option>
-  
-	</select>
-
-
-<p id="error"></p>
-
-
-	<button type="submit" id="subMit" class="submit1" onclick="message()">Submit</button>
-</div>
-
-	<!-- style="padding: 5px;padding-top: 7px;padding-bottom: 7px;" -->
-
-	<!-- <label for="character">Select the syntax:</label> -->
-	
-	
-	<!-- <p id="warningMessage" class="warning" style="color: red;"></p> -->
-	
-
-</div>
-   <div class="simsubscreen" id="canvas2" name="canvas2" style="visibility:hidden;">
-	<strong class="incanvas">STEP</strong>
-	<span class="circlebg">&nbsp;2&nbsp;</span>
-	<p class="steptext">&nbsp;Observe the selected RST output.
-	<br><br><br><br><br><br>
-
-	<p class="rst" id="RST"></p>
-&nbsp;
-<img src="images\icons8-speaker.gif" class="speaker" id="speaker-icon" style="visibility:hidden;" >
-<button  class="plybtn" id="ply" onclick="speak()" >Play</button>
-
-
-	<p class="readC">Readability</p>
-	<p class="rd1">:</p>
-	<p id="readR1" class="read"></p>
-
-
-	<p class="signalC">Signal strength</p>
-	<p class="sg1">:</p>
-	<p id="signalS1"></p>
-
-
-	<p class="toner" style="font-weight: 600;" >Tone</p>
-	<p class="tn1">:</p>
-	<p id="toneT1"></p>
-
-	
-
-	<button id="repeat" onclick="repeat()" style="padding-bottom: 9px;visibility: hidden;">
-		<span class="material-symbols-outlined" style="font-size: 25px;">
-			repeat
-			</span>
-		Repeat</button>
-		
-</div>
-
-
-
-
-
-
-
-
-<img class ="" id="arrow1" style="visibility:hidden;"/>
-
-<div id="copyright"> &copy; 2023-<script>document.write(new Date().getFullYear())</script> SOLVE - The Virtual Lab @ NITK Surathkal, Department of Water Resources & Ocean Engineering</div>
-</div>
-</body> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DMl- solve responsive</title>
+    <meta name="description" content="A small project to demonstrate media queries and other responsive design patterns.">
+    <meta name="author" content="Rocco P">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/querry.css">
+    <script type="text/javascript" src="js/script.js"></script>
+   
+  </head>
+  <body class="paintitred">
+    <main class="content">
+      <div class="main-heading">
+        <h1>EXPLORING HAM RADIO:RST-SYSTEM</h1>
+      </div>
+      <div class="main-canvas">
+        <div class="simsubscreen" id="canvas0">
+          <div class="grid-page1">
+            <h4 class="incanvas">Objective:</h4>
+            <p class="incanvas" style="font-size:14px;">To develop a comprehensive understanding of the readability, strength, and tone (for Morse code) of a received signal.</p>
+            <br/>
+            <h4 class="incanvas">Description:</h4>
+            <p style="font-size:14px;text-align: justify;">
+              The RST reporting system comprises three distinct numerical components: Readability (R), Strength (S), and Tone (T).
+              It is important to note that the Tone value is specifically applicable to Morse code transmissions.
+              <br><br>
+              Amateur radio operators, shortwave enthusiasts, and other radio hobbyists 
+              utilize the R-S-T system to communicate the quality of received radio signals. This system comprises a 
+              three-digit code, with each digit representing an evaluation of the signal's readability, strength, and tone,
+              respectively. Originating in 1934, the code was devised by Arthur W. Braaten, W2BSR, an amateur radio operator,
+              and bears resemblance to the codification outlined in the ITU Radio Regulations in Cairo in 1938.
+            </p>
+            <p style="font-size:14px;text-align: justify;"><strong>Readability (R)</strong>: This assesses how easily the transmitted information can be understood. It is often graded on a scale from 1 to 5, where 1 is barely readable and 5 is perfectly readable.</p>
+            <p style="font-size:14px;text-align: justify;"><strong>Signal Strength (S)</strong>: This indicates the strength or power level of the received signal. It is typically graded on a scale from 1 to 9, with 1 being an extremely weak signal and 9 being an extremely strong signal.</p>  
+            <p style="font-size:14px;text-align: justify;"><strong>Tone (T)</strong>: This is gauged on a scale ranging from 1 to 9. Tone specifically applies to Morse code and other digital transmission methods, and it is not applicable to voice operations.</p>
+          </div>
+        </div>
+        <div class="simsubscreen" id="canvas1" name="canvas1" style="display: none;">
+          <div>
+            <strong class="incanvas">STEP:</strong>
+            <p class="steptext">&nbsp;Select values from the dropdowns, then click play button to hear the selected values.</p>
+            <br><br><br><br><br>
+            <div class="rst-rating-system">
+              <div class="selectionbg">
+                <h2>Readability (R)</h2>
+                <select id="readability">
+                  <option value="1">1 (Unreadable)</option>
+                  <option value="2">2 (Barely readable)</option>
+                  <option value="3">3 (Readable with considerable difficulty)</option>
+                  <option value="4">4 (Readable with practically no difficulty)</option>
+                  <option value="5" selected>5 (Perfectly readable)</option>
+                </select>
+              </div>
+              <div class="selectionbg">
+                <h2>Signal Strength (S)</h2>
+                <select id="signal-strength">
+                  <option value="1">1 (Faint signals barely perceptible)</option>
+                  <option value="2">2 (Very weak signals)</option>
+                  <option value="3">3 (Weak signals)</option>
+                  <option value="4">4 (Fair signals)</option>
+                  <option value="5" selected>5 (Fairly good signals)</option>
+                  <option value="6">6 (Good signals)</option>
+                  <option value="7">7 (Moderately strong signals)</option>
+                  <option value="8">8 (Strong signals)</option>
+                  <option value="9">9 (Extremely strong signals)</option>
+                </select>
+              </div>
+              <div class="selectionbg">
+                <h2>Tone (T)</h2>
+                <select id="tone">
+                  <option value="1">1 (Sixty-cycle ac or less, very rough and broad)</option>
+                  <option value="2">2 (Very rough ac, very harsh and broad)</option>
+                  <option value="3">3 (Rough ac tone, rectified but not filtered)</option>
+                  <option value="4">4 (Rough note, some trace of filtering)</option>
+                  <option value="5">5 (Filtered rectified ac but strongly ripple-modulated)</option>
+                  <option value="6">6 (Filtered tone, definite trace of ripple modulation)</option>
+                  <option value="7">7 (Near pure tone, trace of ripple modulation)</option>
+                  <option value="8">8 (Near perfect tone, slight trace of modulation)</option>
+                  <option value="9" selected>9 (Perfect tone, no trace of ripple or modulation of any kind)</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <div class="btn-play">
+                <button id="play-button" class="plybtn">Play</button>
+              </div>
+            </div>
+            
+            <div class="signal-quality-meter">
+              <h2>Signal Strength Meter</h2>
+              <meter id="signal-strength-meter" min="0" max="9" value="5"></meter>
+            </div>
+          </div>
+        </div>
+        <div id="nav">
+          <img id="nextButton" onclick="navNext()" src="images/Next.png" alt="" />
+        </div>
+        <div id="copyright"> &copy; <script>
+          document.write(new Date().getFullYear() - 1);
+          document.write(" ");
+          document.write("-");
+          document.write(" ");
+          document.write(new Date().getFullYear());
+        </script> SOLVE - The Virtual Lab @ NITK Surathkal, Department of Water Resources & Ocean Engineering</div>
+      </div>
+    </main>
+  </body>
 </html>

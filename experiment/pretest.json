@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": " In the RST system, which component assesses the ease of understanding a message?",
+      "question": "In the RST system, which component assesses the ease of understanding a message?",
       "answers": {
         "a": "Readability",
         "b": "Signal Strength",
@@ -27,12 +27,12 @@
         "d": "Resonance"
       },
       "explanations": {
-        "a": "Readability assesses the ease of understanding a message, not the clarity of the signal itself.",
-        "b": "While signal strength is a valid consideration in communication, it is not a specific component in the RST system for evaluating the clarity of a message.",
-        "c": "The clarity of the signal or message is specifically assessed by the \"T\" component in the RST system, which stands for Tone.",
+        "a": "Readability assesses the clarity of the signal or message.",
+        "b": "Signal Strength is a valid consideration in communication, but it is not the specific component in the RST system for evaluating the clarity of a message.",
+        "c": "Tone assesses the quality of the Morse code signal, not the clarity of the message.",
         "d": "Resonance is not a recognized component in the RST system for evaluating the clarity of a signal or message."
       },
-      "correctAnswer": "c",
+      "correctAnswer": "a",
       "difficulty": "Beginner"
     },
     {
@@ -45,7 +45,7 @@
       },
       "explanations": {
         "a": "In the RST system, higher values typically indicate better quality, not poor quality.",
-        "b": "In the RST system, higher values generally indicate better quality",
+        "b": "In the RST system, higher values generally indicate better quality.",
         "c": "In the RST system, higher values typically indicate better quality, not poor quality.",
         "d": "Higher values in the RST system do not indicate the absence of a signal; they usually correspond to better quality."
       },
@@ -64,13 +64,13 @@
         "a": "In the RST system, a perfect readability score is assigned the highest value, which is 5.",
         "b": "The highest readability score in the RST system is usually 5, not 9.",
         "c": "A perfect readability score is not assigned 0 in the RST system; it is assigned the highest value, which is 5.",
-        "d": " A perfect readability score is typically assigned the highest value in the RST system, which is 5, not 1."
+        "d": "A perfect readability score is typically assigned the highest value in the RST system, which is 5, not 1."
       },
       "correctAnswer": "a",
       "difficulty": "Beginner"
     },
     {
-      "question": "Which component of the RST system is most critical for long-distance communication? ",
+      "question": "Which component of the RST system is most critical for long-distance communication?",
       "answers": {
         "a": "Readability",
         "b": "Signal Strength",
@@ -78,7 +78,7 @@
         "d": "All are equally important"
       },
       "explanations": {
-        "a": "Important for conveying message content but not the most critical in long-distance communication",
+        "a": "Important for conveying message content but not the most critical in long-distance communication.",
         "b": "In long-distance communication, signal strength becomes more critical. As the distance increases, the signal may experience attenuation and interference.",
         "c": "More related to emotional aspects; not the most crucial in long-distance communication.",
         "d": "In long-distance communication, signal strength tends to be more critical than readability and tone."
@@ -95,13 +95,13 @@
         "d": "Clarity"
       },
       "explanations": {
-        "a": "While background noise can impact communication, readability is more related to linguistic factors than external interference.",
-        "b": "Background noise and interference can impact the clarity and strength of the signal.",
+        "a": "Background noise and interference primarily affect readability, making the message more difficult to understand.",
+        "b": "Background noise and interference can impact readability and tone as well, not just signal strength.",
         "c": "Background noise might impact the perceived tone to some extent, but it is not the primary factor affected by noise and interference.",
         "d": "Clarity is directly affected by background noise and interference, but in the context of the RST system, \"Tone\" more specifically refers to this aspect."
       },
-      "correctAnswer": "b",
-      "difficulty": "Intermidiate"
+      "correctAnswer": "a",
+      "difficulty": "Intermediate"
     },
     {
       "question": "What is the primary purpose of the RST system in communication?",
@@ -113,12 +113,12 @@
       },
       "explanations": {
         "a": "The RST system primarily focuses on assessing the effectiveness of communication and the receiver's understanding, not the sender's mood.",
-        "b": " The RST system does evaluate communication effectiveness, but its primary focus is on the receiver's understanding rather than the communication channel itself.",
-        "c": "The primary purpose of the RST (Readability Signal Strength Tone) system in communication is to measure the receiver's understanding of the transmitted message.",
-        "d": " The RST system is not designed to monitor power usage; it is more concerned with the quality and effectiveness of the communication."
+        "b": "The RST system evaluates the effectiveness of the communication channel, including the receiver's understanding.",
+        "c": "The primary purpose of the RST (Readability Signal Strength Tone) system in communication is to measure the effectiveness of the communication channel.",
+        "d": "The RST system is not designed to monitor power usage; it is more concerned with the quality and effectiveness of the communication."
       },
-      "correctAnswer": "c",
-      "difficulty": "Intermidiate"
+      "correctAnswer": "b",
+      "difficulty": "Intermediate"
     },
     {
       "question": "What does a low readability score in the RST system suggest?",
@@ -129,13 +129,13 @@
         "d": "No message received"
       },
       "explanations": {
-        "a": "A low readability score suggests the opposite; the message is not easily understandable",
+        "a": "A low readability score suggests the opposite; the message is not easily understandable.",
         "b": "A low readability score indicates that the message is not moderately clear but rather difficult to understand.",
         "c": "A low readability score in the RST system suggests that the message is difficult to understand.",
         "d": "A low readability score doesn't imply that no message was received; it indicates that the received message is challenging to comprehend."
       },
       "correctAnswer": "c",
-      "difficulty": "Intermidiate"
+      "difficulty": "Intermediate"
     },
     {
       "question": "What does a low tone score in the RST system indicate?",
@@ -149,10 +149,10 @@
         "a": "A low tone score suggests the opposite; the tone is not clear and pleasant.",
         "b": "A low tone score in the RST system suggests a harsh or distorted tone.",
         "c": "A low tone score doesn't necessarily mean that no tone is detected; it means the detected tone is harsh or distorted.",
-        "d": "Tone scores in the RST system are related to the emotional or attitudinal aspects of communication, not the speed of transmission."
+        "d": "Tone scores in the RST system are related to the quality of the Morse code signal, not the speed of transmission."
       },
       "correctAnswer": "b",
-      "difficulty": "Intermidiate"
+      "difficulty": "Intermediate"
     },
     {
       "question": "How does the RST system contribute to effective communication in low-bandwidth situations?",
@@ -164,12 +164,12 @@
       },
       "explanations": {
         "a": "While signal strength is important, in low-bandwidth situations, the emphasis is often on efficient information transfer rather than signal strength.",
-        "b": " Tone quality may be important in communication, but in low-bandwidth situations, the focus is often on transmitting essential information rather than emotional nuances.",
+        "b": "Tone quality may be important in communication, but in low-bandwidth situations, the focus is often on transmitting essential information rather than emotional nuances.",
         "c": "In low-bandwidth situations where the available communication resources are limited, the RST system contributes to effective communication by providing concise readability assessments.",
-        "d": " In low-bandwidth situations, the priority is usually on transmitting essential information rather than focusing on the emotional state of the sender."
+        "d": "In low-bandwidth situations, the priority is usually on transmitting essential information rather than focusing on the emotional state of the sender."
       },
       "correctAnswer": "c",
-      "difficulty": "Intermidiate"
+      "difficulty": "Intermediate"
     },
     {
       "question": "How is the RST system commonly used in amateur radio communication?",
@@ -177,7 +177,7 @@
         "a": "Assessing weather conditions",
         "b": "Evaluating Morse code proficiency",
         "c": "Gauging the quality of voice transmissions",
-        "d": "Testing satellite signals."
+        "d": "Testing satellite signals"
       },
       "explanations": {
         "a": "The RST system is not commonly used for assessing weather conditions; it is more related to evaluating communication quality.",
@@ -215,11 +215,11 @@
       },
       "explanations": {
         "a": "The RST system does consider signal strength, but it doesn't prioritize it over clarity; both are important factors.",
-        "b": " While tone quality is considered, the primary emphasis of the RST system is on a standardized assessment of communication quality, including clarity and signal strength.",
+        "b": "While tone quality is considered, the primary emphasis of the RST system is on a standardized assessment of communication quality, including clarity and signal strength.",
         "c": "The RST system contributes to efficient communication in challenging conditions by offering a standardized method to assess factors like readability, signal strength, and tone.",
         "d": "The RST system considers tone, but it is not primarily focused on measuring the sender's emotional tone. It is more about assessing the quality of the transmitted signal."
       },
-      "correctAnswer": "C",
+      "correctAnswer": "c",
       "difficulty": "Advanced"
     },
     {
@@ -243,15 +243,15 @@
       "question": "Why is the RST system used in Morse code communications?",
       "answers": {
         "a": "To measure the speed of Morse code transmission",
-        "b": "To assess the clarity of Morse code signals ",
+        "b": "To assess the clarity of Morse code signals",
         "c": "To evaluate the sender's typing speed",
         "d": "To monitor the tone of Morse code signals"
       },
       "explanations": {
         "a": "The RST system primarily assesses the quality and clarity of signals, not the speed of transmission.",
         "b": "The RST system is used in Morse code communications to assess the clarity of Morse code signals.",
-        "c": " The RST system is not designed to evaluate typing speed; it focuses on the quality of the transmitted signals.",
-        "d": " While the RST system does consider tone in the context of voice transmissions, it is not typically used to monitor the tone of Morse code signals."
+        "c": "The RST system is not designed to evaluate typing speed; it focuses on the quality of the transmitted signals.",
+        "d": "While the RST system does consider tone in the context of Morse code signals, it is not typically used to monitor the tone of Morse code signals."
       },
       "correctAnswer": "b",
       "difficulty": "Advanced"
